@@ -1,24 +1,7 @@
 <div class="container px-5 px-sm-0">
   <div class="row">
     <div class="col-md-3">
-    <h2>User Info</h2>
-    <%= image_tag current_user.get_profile_image(100,100) %>
-      <table class="table">
-        <tbody>
-          <tr>
-            <th>name</th>
-            <th><%= current_user.name %></th>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <th><%= current_user.introduction %></th>
-          </tr>
-        </tbody>
-      </table>
-      <div class="row">
-      <%= link_to "編集", root_path, class: "btn btn-outline-secondary btn-block" %>
-      </div>
-
+      <%= render 'users/user_info' %>
       <%= render 'new', book: @book %>
     </div>
 
