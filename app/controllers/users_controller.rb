@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def create
-    @user = User.new(name:params[:name], email:params[:email], image_name:"default_image.jpg")
+    @user = User.new(name:params[:name], email:params[:email], image_name: "default_image.jpg")
   end
 
   def index
