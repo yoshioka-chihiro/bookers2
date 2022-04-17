@@ -26,7 +26,7 @@
               <% end %>
             </td>
             <!--投稿の詳細ページに飛ぶ-->
-            <td><%= link_to book.title, book_path(@user.id) %></td>
+            <td><%= link_to book.title, books_path(book.id) %></td>
             <td><%= book.body %></td>
           </tr>
           <% end %>
