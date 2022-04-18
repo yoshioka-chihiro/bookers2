@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
  protect_from_forgery
-   # topページだけはログインしてなくても閲覧できる！
-  before_action :authenticate_user!, expect: [:top]
+  # topページだけはログインしてなくても閲覧できる！
+  # before_action :authenticate_user!, expect: [:top, :about]
 
-   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
   # サインイン後にどこにいくか？
@@ -26,4 +26,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
   end
+
+
 end
